@@ -1,0 +1,27 @@
+
+#GridContainer {
+display:grid;
+width:100%;
+grid-template-columns: 33% 33% 33%;
+}
+.QuoteContainer {
+    margin:16px;
+    
+    flex-direction: row;
+    height:125px;
+    width:400px;
+    background-color: #D3D3D3;
+    border-radius: 20px;
+}
+.QuoteContent {
+    text-align: center;
+    
+      font-weight: bold;
+        margin:10px;
+}
+.QuoteAuthor {
+    text-align: right;
+    font-weight: bold;
+    margin:10px;
+       font-style:italic;
+}

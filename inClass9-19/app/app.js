@@ -47,6 +47,10 @@ async function goChuck() {
     
 }
 
+
+
+
+
 goChuck().then((data) => {
     let chuckMsg = document.createElement("p")
 chuckMsg.innerHTML = data.value;
