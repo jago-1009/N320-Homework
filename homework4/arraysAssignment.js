@@ -32,7 +32,7 @@ for(i=0;i<5;i++) {
 //Question 6
 for(x=0;x<5;x++) {
     let totalGrade = students[x]['grades'].reduce((total, grade) => total + grade, 0)
-    pArray[5].innerHTML += "<br>" + students[x].name + "'s Average is :" + totalGrade
+    pArray[5].innerHTML += "<br>" + students[x].name + "'s Total is :" + totalGrade
 }
 //Functions
 function FindAverage(e) {
