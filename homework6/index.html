@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Title</title>
+ </head>
+ <body>  
+    <div id="title">
+        <h1>{{name}}</h1>
+        <h2>{{course}}:{{assign_name}}</h2>
+        <h3>Difficulty Level: {{difficulty_level}}/5</h3>
+        <h4>Due: {{assignment_due}}</h4>
+        <hr></hr>
+    </div>
+    <div id="list">
+        <ul>
+            <li v-for="lang in myList">{{lang}}</li>
+        </ul>
+              
+    
+    
+    <button v-on:click="countList">My favorite Language</button>
+    <p>My favorite language is {{myList[counter]}}</p>
+    <br>
+    <label for="Language">New Language: </label>
+    <input v-model="data" type="text" name="Language">
+   
+    <br>
+    <button v-on:click="pushData">add {{data}} to your List</button>
+    <p>{{renderOld()}}</p>
+</div>
+ <script src= "https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="app/app.js"></script></body>
+</html>

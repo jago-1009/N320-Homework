@@ -53,7 +53,7 @@ class display {
             return this.itemArr.reduce((acc, value) => acc + value.value, 0);
 
         }
-        displayCatalog(divvalue,array) {
+        displayCatalog(divvalue) {
             this.itemArr.forEach(value => {
         divvalue.innerHTML += ('Title:'+ value.title + "<br>");
         divvalue.innerHTML +=('Publication Date:'+ value.pubYear + "<br>");
@@ -92,10 +92,10 @@ console.log(b1)
 dPlay.addItem([b1,c1,d1]);
 
 
-dPlay.displayCatalog(divs[0])
+dPlay.displayCatalog(divs[0]);
 h2[0].innerHTML += "$"+dPlay.getTotal();
 let newMedia = dPlay.removeItem(2);
-console.log(newMedia)
+console.log(newMedia);
 let dPlay2 = new display();
 dPlay2.addItem(newMedia);
 dPlay2.displayCatalog(divs[1])

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="refresh" content="30">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Title</title>
+ <link rel="stylesheet" href="css/styles.css">
+ </head>
+ 
+ <body>
+
+<article id="challenge">
+<h1>{{data1}}</h1>
+
+<h3>{{ getTodayDate() }}</h3>
+<p></p>
+<button v-on:click="addMore(5)">Add</button>
+<button v-on:click="counter--">Remove</button>
+<p>Count: {{counter}}</p>
+<p><a v-bind:href="vueLink">Vue</a></p>
+</article>
+
+
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app/app.js"></script></body>
+</html>
