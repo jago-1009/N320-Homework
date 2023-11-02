@@ -16,21 +16,21 @@
     </div>
     <div id="list">
         <ul>
-            <li v-for="lang in myList">{{lang}}</li>
+            <li v-for="lang in myList">{{lang.lang}}</li>
         </ul>
               
     
     
     <button v-on:click="countList">My favorite Language</button>
-    <p>My favorite language is {{myList[counter]}}</p>
+    <p>My favorite language is {{myList[counter].lang}}</p>
     <br>
     <label for="Language">New Language: </label>
     <input v-model="data" type="text" name="Language">
    
     <br>
-    <button v-on:click="pushData">add {{data}} to your List</button>
+    <button v-on:click="pushData">add {{data.lang}} to your List</button>
     <p>{{renderOld()}}</p>
 </div>
- <script src= "https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="app/app.js"></script></body>
 </html>
