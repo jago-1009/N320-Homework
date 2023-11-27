@@ -1,5 +1,5 @@
 {
-  "name": "firstvueproject",
+  "name": "propsslots",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,8 @@
     "serve:": "live-server"
   },
   "dependencies": {
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "vue-router": "^4.0.13"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.3.3",

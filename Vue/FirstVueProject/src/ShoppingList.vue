@@ -7,9 +7,9 @@
     <button @click="addItem" class="add-button">Add Item</button>
     <ul>
       <li v-for="(item, i) in shoppingList" :key="i">
-        {{ item }} 
-        <button @click="deleteItem(i)" >Delete</button>
-        <button @click="editItem(i)" >Delete</button>
+        {{ item }}
+        <button @click="deleteItem(i)">Delete</button>
+        <button @click="editItem(i)">Delete</button>
       </li>
     </ul>
     <Button @click="deleteItem(-1)"></Button>
@@ -30,12 +30,12 @@ export default {
       this.shoppingList = i ? this.shoppingList.filter((item, x) => x !== i) : []
     },
     editItem(i) {
-        this.shoppingList.forEach((item, k) => {
-            if(i===k) {
-                let newValue = prompt(`current Value: ${item}`)
-                this.shoppingList.splice(k,1,newValue)
-            }
-        })
+      this.shoppingList.forEach((item, k) => {
+        if (i === k) {
+          let newValue = prompt(`current Value: ${item}`)
+          this.shoppingList.splice(k, 1, newValue)
+        }
+      })
     }
   }
 }

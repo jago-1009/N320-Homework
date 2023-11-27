@@ -1,6 +1,4 @@
-import './assets/main.css'
+import { createApp } from '../node_modules/vue'
+import ShoppingList from './ShoppingList.vue'
 
-import { createApp } from 'vue'
-import App from './App.vue'
-
-createApp(App).mount('#app')
+createApp(ShoppingList).mount('#app')
