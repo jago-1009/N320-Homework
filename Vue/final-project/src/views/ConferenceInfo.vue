@@ -2,9 +2,8 @@
 export default {
   data() {
     return {
-      isSessionHome: true,
-      mySessions: [],
-      filterNum: [],
+      optionVal: '',
+      optionPres: '',
       sessions: [
         {
           id: 1,
@@ -107,10 +106,24 @@ export default {
           sDay: 'Saturday',
           added: false
         }
-      ]
+      ],
+      mySessions: [],
+      filteredSessions: [],
+      add: {}
     }
   },
+
   methods: {
+    addToList(data, idx) {
+      this.add[idx] = !this.add[idx]
+      this.$emit('add-to-list', data)
+
+      // console.log(data)
+    },
+    removeFromList(data, idx) {
+      this.add[idx] = !this.add[idx]
+      this.$emit('remove-from-list', data)
+    },
     timeFilter(t) {
       if (t > 12) {
         return t - 12 + ':00' + ' PM'
@@ -118,24 +131,109 @@ export default {
         return t + ':00' + ' AM'
       }
     },
-    toggleHome() {
-      return (this.isSessionHome = false)
-    },
-    toggleBack() {
-      return (this.isSessionHome = true)
-    },
-    addToList(data) {
+    logTest(data) {
       console.log(data)
-      this.mySessions.push(data)
+    },
+    resetFilter() {
+      this.optionVal = ''
+      this.optionPres = ''
+      this.filteredSessions = this.sessions
+    },
+    setData() {
+      this.filteredSessions = this.sessions
+    }
+  },
+  watch: {
+    optionVal: function (data) {
+      if (this.optionVal == '') {
+        this.filteredSessions = this.sessions
+      } else {
+        this.filteredSessions = this.sessions.filter((session) => session.tags.includes(data))
+      }
+    },
+
+    optionPres: function (data) {
+      if (this.optionPres == '') {
+        this.filteredSessions = this.sessions
+      } else {
+        this.filteredSessions = this.sessions.filter((session) => session.presenter == data)
+      }
     }
   }
 }
 </script>
 <template>
-  <NavBar :mySessions="mySessions" :isSessionHome="isSessionHome"><h1>My Sessions</h1></NavBar>
+  <br />
+  <div class="header">
+    <div class="filter-buttons">
+      Filter by:
+      <select name="filter" id="filter" v-model="optionVal">
+        <option value="Javascript">JavaScript</option>
+        <option value="UI/UX">UI/UX</option>
+        <option value="Front End">Front End</option>
+        <option value="CSS">CSS</option>
+        <option value="React">React</option>
+        <option value="Quality">Code Quality</option>
+        <option value="Mobile">Mobile</option>
+        <option value="Cloud">Cloud</option>
+        <option value="Hardware">Hardware</option>
+      </select>
+      Filter by:
+      <select name="filter" id="filter" v-model="optionPres">
+        <option value="Chris Nelson">Chris Nelson</option>
+        <option value="Matt Burke">Matt Burke</option>
+        <option value="Burton Smith">Burton Smith</option>
+        <option value="Mark Erikson">Mark Erikson</option>
+        <option value="Todd Libby">Todd Libby</option>
+        <option value="Stephen Cleary">Stephen Cleary</option>
+        <option value="Ryan Edge">Ryan Edge</option>
+        <option value="Mark Erikson">Mark Erikson</option>
+        <option value="Sierra OBryan">Sierra OBryan</option>
+      </select>
+      <button v-on:click="resetFilter">Clear Filter</button>
+    </div>
+    <div class="list">{{ filteredSessions.length }} of {{ sessions.length }} sessions</div>
+  </div>
+  <div v-for="(session, idx) in filteredSessions" :key="session" class="conference-info-holder">
+    <div class="conference-info-left">
+      <h1>{{ session.title }}</h1>
+      <h2>Presented by: {{ session.presenter }}</h2>
+      <h3>Description: {{ session.desc }}</h3>
+    </div>
+    <div class="conference-info-right">
+      <button v-if="!add[idx]" class="add-to-btn" v-on:click="addToList(session, idx)">
+        Add to List
+      </button>
+      <button v-else class="remove-button" v-on:click="removeFromList(session, idx)">
+        Remove From List
+      </button>
+      <h1>{{ session.sDay }} At {{ timeFilter(session.sTime) }}</h1>
+    </div>
+  </div>
 </template>
+
 <style>
-template {
-  background-color: salmon;
+.conference-info-holder {
+  background-color: lightblue;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.conference-info-left {
+  display: block;
+  margin-left: 30px;
+}
+.add-to-btn {
+  margin-top: 20px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  font-size: 20px;
 }
 </style>

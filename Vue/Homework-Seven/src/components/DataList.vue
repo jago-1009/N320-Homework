@@ -106,20 +106,20 @@ export default {
       ],
       filteredMembers: [],
       myMembers: [],
-      adding:{}
+      adding: {}
     }
   },
   methods: {
-    addToArr(data,idx) {
+    addToArr(data, idx) {
       this.myMembers.push(data)
-      data.team=this.teamName
+      data.team = this.teamName
       this.adding[idx] = !this.adding[idx]
-
+      this.$emit('members', {
+        members: data
+      })
     },
     moreInfo(idx) {
-        this.showInfo[idx] = !this.showInfo[idx]
-
-      
+      this.showInfo[idx] = !this.showInfo[idx]
     },
     filterRole(data) {
       console.log('DATA', data)
@@ -129,13 +129,10 @@ export default {
       console.log('FILTER', this.roleFilter)
     }
   },
-  computed: {
-   
-  },
+  computed: {},
   watch: {
     roleSelected: function (data) {
-      this.filteredMembers = this.members.filter(member => member.role === data)
-      
+      this.filteredMembers = this.members.filter((member) => member.role === data)
     }
   }
 }
@@ -150,22 +147,20 @@ export default {
       <h2>{{ member.name }}</h2>
       <p>{{ member.role }}</p>
 
-      <button class="button" @click="moreInfo(member.id)" >
+      <button class="button" @click="moreInfo(member.id)">
         <div v-if="!showInfo[member.id]">Show More Info</div>
         <div v-else>Hide Info</div>
-        
-      
       </button>
-   
-      <button  @click="addToArr(member, member.id)" v-show="!adding[member.id]" >add to {{ this.teamName }}</button>
-      <div class="moreInfo" v-show="showInfo[member.id]">
 
+      <button @click="addToArr(member, member.id)" v-show="!adding[member.id]">
+        add to {{ this.teamName }}
+      </button>
+      <div class="moreInfo" v-show="showInfo[member.id]">
         <p>{{ member.phone }}</p>
         <p>{{ member.email }}</p>
       </div>
     </div>
   </div>
-  
 </template>
 
 <style>

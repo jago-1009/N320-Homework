@@ -1,0 +1,280 @@
+{
+    "metadata": {
+      "author": "Jay Annadurai",
+      "project": "N320-Vue-Advanced",
+      "file": "Members.json",
+      "date": "28 Nov 2023",
+      "description": "Contains Sample Members"
+    },
+  
+    "data": {
+      "friends": [
+        {
+          "id": 1,
+          "name": "Chandler Bing",
+          "phone": "123 123 1234",
+          "email": "cBing@gmail.com",
+          "role": "Developer",
+          "team": ""
+        },
+        {
+          "id": 2,
+          "name": "Joey Tribbiani",
+          "phone": "321 321 4321",
+          "email": "jtribby@gmail.com",
+          "role": "UI/UX",
+          "team": ""
+        },
+        {
+          "id": 3,
+          "name": "Ross Geller",
+          "phone": "222 333 4444",
+          "email": "rgeller@gmail.com",
+          "role": "Developer",
+          "team": ""
+        },
+        {
+          "id": 4,
+          "name": "Monica Bing",
+          "phone": "123 123 1235",
+          "email": "mbing@gmail.com",
+          "role": "Designer",
+          "team": ""
+        },
+        {
+          "id": 5,
+          "name": "Rachel Green",
+          "phone": "876 345 1678",
+          "email": "rgreen@gmail.com",
+          "role": "UI/UX",
+          "team": ""
+        },
+        {
+          "id": 6,
+          "name": "Phoebe Buffay",
+          "phone": "678 908 5686",
+          "email": "pbuff@gmail.com",
+          "role": "UI/UX",
+          "team": ""
+        },
+        {
+          "id": 7,
+          "name": "Stacy Boling",
+          "phone": "345 679 4212",
+          "email": "sBoling@gmail.com",
+          "role": "Designer",
+          "team": ""
+        },
+        {
+          "id": 8,
+          "name": "Jake Trimult",
+          "phone": "443 665 7888",
+          "email": "jtrim@gmail.com",
+          "role": "Developer",
+          "team": ""
+        },
+        {
+          "id": 9,
+          "name": "Rose Greathouse",
+          "phone": "345 567 9087",
+          "email": "rgreat@gmail.com",
+          "role": "UI/UX",
+          "team": ""
+        },
+        {
+          "id": 10,
+          "name": "Mindy Kellum",
+          "phone": "555 666 7777",
+          "email": "mKellum@gmail.com",
+          "role": "UI/UX",
+          "team": ""
+        },
+        {
+          "id": 11,
+          "name": "Sarah Miller",
+          "phone": "987 654 1234",
+          "email": "smiller@gmail.com",
+          "role": "Developer",
+          "team": ""
+        },
+        {
+          "id": 12,
+          "name": "Caroline Bender",
+          "phone": "111 222 3456",
+          "email": "cBend@gmail.com",
+          "role": "Designer",
+          "team": ""
+        }
+      ],
+      "blacklist": [
+        {
+          "id": 1,
+          "name": "Raymond Reddington",
+          "phone": "555 010 1122",
+          "email": "reddington@blacklist.com",
+          "role": "Strategist",
+          "team": ""
+        },
+        {
+          "id": 2,
+          "name": "Elizabeth Keen",
+          "phone": "555 020 1133",
+          "email": "ekeen@fbi.gov",
+          "role": "Agent",
+          "team": ""
+        },
+        {
+          "id": 3,
+          "name": "Donald Ressler",
+          "phone": "555 030 1144",
+          "email": "ressler@fbi.gov",
+          "role": "Agent",
+          "team": ""
+        },
+        {
+          "id": 4,
+          "name": "Harold Cooper",
+          "phone": "555 040 1155",
+          "email": "cooper@fbi.gov",
+          "role": "Strategist",
+          "team": ""
+        },
+        {
+          "id": 5,
+          "name": "Tom Keen",
+          "phone": "555 050 1166",
+          "email": "tkeen@private.com",
+          "role": "Operative",
+          "team": ""
+        },
+        {
+          "id": 6,
+          "name": "Dembe Zuma",
+          "phone": "555 060 1177",
+          "email": "dzuma@blacklist.com",
+          "role": "Strategist",
+          "team": ""
+        },
+        {
+          "id": 7,
+          "name": "Aram Mojtabai",
+          "phone": "555 070 1188",
+          "email": "mojtabai@tech.com",
+          "role": "Technical Expert",
+          "team": ""
+        },
+        {
+          "id": 8,
+          "name": "Samar Navabi",
+          "phone": "555 080 1199",
+          "email": "navabi@fieldagent.com",
+          "role": "Agent",
+          "team": ""
+        },
+        {
+          "id": 9,
+          "name": "Mr. Kaplan",
+          "phone": "555 090 1200",
+          "email": "kaplan@cleanup.com",
+          "role": "Operative",
+          "team": ""
+        },
+        {
+          "id": 10,
+          "name": "Meera Malik",
+          "phone": "555 100 1211",
+          "email": "malik@analysis.com",
+          "role": "Agent",
+          "team": ""
+        },
+        {
+          "id": 11,
+          "name": "Laurel Hitchin",
+          "phone": "555 110 1222",
+          "email": "lhitchin@politics.com",
+          "role": "Strategist",
+          "team": ""
+        },
+        {
+          "id": 12,
+          "name": "Julian Gale",
+          "phone": "555 120 1233",
+          "email": "jgale@fbi.gov",
+          "role": "Agent",
+          "team": ""
+        },
+        {
+          "id": 13,
+          "name": "Anna McMahon",
+          "phone": "555 130 1244",
+          "email": "amcmahon@justice.gov",
+          "role": "Strategist",
+          "team": ""
+        },
+        {
+          "id": 14,
+          "name": "Katarina Rostova",
+          "phone": "555 140 1255",
+          "email": "krostova@spy.net",
+          "role": "Operative",
+          "team": ""
+        },
+        {
+          "id": 15,
+          "name": "Glen Carter",
+          "phone": "555 150 1266",
+          "email": "gcarter@dmv.us",
+          "role": "Technical Expert",
+          "team": ""
+        },
+        {
+          "id": 16,
+          "name": "Luther Braxton",
+          "phone": "555 160 1277",
+          "email": "lbraxton@criminal.com",
+          "role": "Operative",
+          "team": ""
+        },
+        {
+          "id": 17,
+          "name": "Alina Park",
+          "phone": "555 170 1288",
+          "email": "apark@fbi.gov",
+          "role": "Agent",
+          "team": ""
+        },
+        {
+          "id": 18,
+          "name": "Leonard Caul",
+          "phone": "555 180 1299",
+          "email": "lcaul@tech.com",
+          "role": "Technical Expert",
+          "team": ""
+        },
+        {
+          "id": 19,
+          "name": "Marvin Gerard",
+          "phone": "555 190 1300",
+          "email": "mgerard@legal.com",
+          "role": "Strategist",
+          "team": ""
+        },
+        {
+          "id": 20,
+          "name": "Kate Kaplan",
+          "phone": "555 200 1311",
+          "email": "kkaplan@cleaner.com",
+          "role": "Operative",
+          "team": ""
+        },
+        {
+          "id": 21,
+          "name": "Sasha Lau",
+          "phone": "555 210 1322",
+          "email": "slau@cybersecurity.com",
+          "role": "Technical Expert",
+          "team": ""
+        }
+      ]
+    }
+  }
