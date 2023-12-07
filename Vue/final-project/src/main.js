@@ -1,10 +1,10 @@
 import App from './App.vue'
 import ConferenceInfo from './views/ConferenceInfo.vue'
-import NavBar from './components/NavBar.vue'
+import NavBar from '/components/NavBar.vue'
 import myConferences from './views/myConferences.vue'
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from './vue-router'
 
-import { createApp } from 'vue'
+import { createApp } from './vue'
 
 const routes = [
   { path: '/', component: ConferenceInfo, name: 'default' },
